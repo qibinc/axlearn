@@ -381,7 +381,7 @@ def sample_from_datasets(
     sources: Sequence[InstantiableConfig],
     weights: Sequence[float],
     seed: Optional[int] = None,
-    autotune_ram_budget_gb: Optional[int] = None,
+    autotune_ram_budget_gb: Optional[int] = 200,
 ) -> BuildDatasetFn:
     """Returns a data source formed by sampling from multiple data sources without replacement.
     All source datasets are repeated to prevent the sampling from stopping early and to prevent
